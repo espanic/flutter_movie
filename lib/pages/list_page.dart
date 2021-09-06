@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_movie/components/grade_image_circle.dart';
-import 'package:flutter_movie/movies_response.dart';
+import 'package:flutter_movie/model/movies_response.dart';
 import 'package:flutter_movie/pages/detail_page.dart';
 import 'package:get/get.dart';
 
 class ListPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -21,7 +20,7 @@ class ListPage extends StatelessWidget {
     MovieResponse movie = movieResponses[index];
     return InkWell(
       onTap: () {
-        Get.to(() => DetailPage());
+        Get.to(() => DetailPage(movie.id));
       },
       child: Container(
         padding: EdgeInsets.all(8),

@@ -8,7 +8,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedTapIndex = 1;
+  int _selectedTapIndex = 0;
 
   @override
   Widget build(BuildContext context) {
